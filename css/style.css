@@ -1,0 +1,258 @@
+:root {
+    --primery: #585959;
+    --secondry: #b0bcc7;
+    --font: #d1eaf8;
+    --background: rgb(33, 30, 30);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background);
+    color: var(--font);
+    min-height: 2000px;
+}
+
+
+/* navbar */
+.navbar {
+    font-family: 'Just Another Hand', cursive;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1.4rem 7%;
+    background-color: var(--background);
+    border-bottom: 1px solid var(--primery);
+    color: var(--font);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999999;
+}
+
+.navbar .Logo{
+    font-size: 2rem;
+    color: rgba(209, 234, 248, 0.8)
+}
+
+.navbar .navbar-nav a {
+    color: var(--font);
+    display: inline-block;
+    font-size: 1.4rem;
+    margin: 0 1rem;
+}
+.navbar .navbar-nav a:hover{
+    color: var(--secondry);
+}
+.navbar .navbar-nav a:active{
+    color: var(--font);
+}
+
+/*styling hamburger menu*/
+
+.navbar .hamburger {
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+#Hamburger-Menu {
+    display: none;
+}
+
+/*hero section*/
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../material/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.hero .content {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+.hero .content h1{
+    padding: 10px;
+    font-size: 6em;
+    text-shadow: 2px, 2px, 4px, rgba(33,30,33,0.5);
+    line-height: 1.2;
+}
+.hero .content p span{
+    color: #fff;
+}
+.hero .content p{
+    font-size: 1.4em;
+    text-shadow: 2px, 2px, 4px, rgba(33,30,33,0.5);
+    line-height: 1.2;
+    font-weight: 400;
+}
+.hero .content .cta{
+    display: inline-block;
+    margin: 2em 1.2em;
+    padding: 20px 30px;
+    font-size: 1.5em;
+    text-shadow: 2px, 2px, 4px, rgba(33,30,33,0.5);
+    line-height: 1.2;
+    color: #fff;
+    background-color: greenyellow;
+    border-radius: 90px;
+    box-shadow: 2px, 2px, 4px, rgba(33,30,33,0.5);
+}
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    bottom: 0;
+    background: linear-gradient(0deg, var(--background) 3%, rgba(33,30,33,0) 25%);
+}
+
+/*my art*/
+.art .row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+}
+.art .row .myArt{
+    padding: 1rem;
+}
+.art .row .myArt img{
+    flex:1 1 45rem;
+    width: 45%;
+}
+.art .row .myArt img:hover{
+    border-radius: 2rem;
+    width: 50%;
+    transition: 0.5s;
+}
+.art .row .myArt h3 {
+    padding-left: 20rem;
+}
+
+
+/*about me section*/
+.about-me, .art{
+    padding: 7rem 7% 1.4rem;
+}
+.about-me h3, .art h2{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+.about-me .row{
+    display: flex;
+}
+
+.about-me .row .img-prof{
+    flex:1 1 45rem;
+}
+.about-me .row .img-prof img{
+    width: 70%;
+    padding-left: 10rem;
+}
+.about-me .row .content{
+    flex:1 1 35rem;
+    padding: 0.2rem;
+}
+.about-me .row .content h3, .art .myArt h3{
+    font-size:1.5rem ;
+    margin-bottom: 1rem;
+}
+.about-me .row .content p{
+    font-size:1.2rem ;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+    line-height: 1.0;
+}   
+
+footer {
+    background-color: var(--secondry);
+    text-align: center;
+    padding: 1.2rem 0 3rem;
+    color: var(--primery);
+}
+
+footer a p{
+    padding: 1rem;
+    color: var(--primery);
+
+}
+footer .social:hover, footer a:hover {
+    color: var(--font);
+}
+
+
+/*media queries*/
+
+/*laptop*/
+@media (max-width: 1366px) {
+    html{
+        font-size: 75%;
+    }
+}
+/*tab*/
+@media (max-width: 768px) {
+    html{
+        font-size: 58%;
+    }
+    /*poping hamburger menu*/
+    #Hamburger-Menu {
+        display: inline-block;
+    }
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #fff;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+    .navbar .navbar-nav.active{
+        right: 0;
+    }
+    .navbar .navbar-nav a {
+        color: var(--primery);
+        display: block;
+        margin: 1.4rem;
+        padding: 0.7rem;
+        font-size: 2.5rem;
+    }
+    .art .row {
+        flex-wrap: wrap;
+        display: flex;
+        margin-top: 5rem;
+        justify-content: center;
+    }
+    .art .row .myArt{
+        padding: auto;
+    }
+    .art .row .myArt img{
+        position: center;
+        width: 70vh;
+
+    }
+    .about-me .row .img-prof img{
+        width: 90%;
+        padding-left: 10rem;
+    }
+    .art .row .myArt img{
+        pointer-events: none;
+        border-radius: 2rem;
+    }
+}
