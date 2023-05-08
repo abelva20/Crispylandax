@@ -200,13 +200,13 @@ footer .social:hover, footer a:hover {
 /*media queries*/
 
 /*laptop*/
-@media (max-width: 145px) {
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
     html{
         font-size: 75%;
     }
 }
 /*tab*/
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     html{
         font-size: 58%;
     }
