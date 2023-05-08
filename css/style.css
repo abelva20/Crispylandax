@@ -200,7 +200,7 @@ footer .social:hover, footer a:hover {
 /*media queries*/
 
 /*laptop*/
-@media (max-width: 1366px) {
+@media (max-width: 145px) {
     html{
         font-size: 75%;
     }
