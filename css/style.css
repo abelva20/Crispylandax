@@ -20,7 +20,6 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background);
     color: var(--font);
-    min-height: 2000px;
 }
 
 
@@ -73,6 +72,7 @@ body {
 /*hero section*/
 .hero {
     min-height: 100vh;
+    min-width: 100vh;
     display: flex;
     align-items: center;
     background-image: url('../material/background.jpg');
