@@ -255,4 +255,12 @@ footer .social:hover, footer a:hover {
         pointer-events: none;
         border-radius: 2rem;
     }
+
+    /*android*/
+    @media only screen and (min-device-width : 360px) and (max-device-width : 640px) {
+        html {
+            font-size: 50%;
+        }
+        
+    }
 }
